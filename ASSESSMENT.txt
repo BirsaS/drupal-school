@@ -1,9 +1,10 @@
 Installation
 ---------------------------------------------------------------------------------------
-- to install the website, clone the site files from https://github.com/BirsaS/drupal-school.
-- create a new database and use the sql file provided via e-mail and import it to your database.
-- change sites/default/settings.php file at line 247 with correct connection data (database, user and password).
-- your site should now be running.
+- to install the website, clone the site files from https://github.com/BirsaS/drupal-school
+- create a new database and use the sql file provided via e-mail and import it to your database
+- change sites/default/settings.php file at line 247 with correct connection data (database, user and password)
+- your site should now be running
+- login as admin with credentials provided via e-mail
 
 
 Drupal 7 or 8
