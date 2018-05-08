@@ -1,0 +1,68 @@
+Installation
+---------------------------------------------------------------------------------------
+- to install the website, clone the site files from https://github.com/BirsaS/drupal-school.
+- create a new database and use the sql file provided via e-mail and import it to your database.
+- change sites/default/settings.php file at line 247 with correct connection data (database, user and password).
+- your site should now be running.
+
+
+Drupal 7 or 8
+---------------------------------------------------------------------------------------
+The decision to create the website in Drupal 7 was because I have a lot more experience with it, although given the assessment requirements, Drupal 8 shouldn't give me trouble as well.
+
+
+Theming
+---------------------------------------------------------------------------------------
+- create/install a new theme in sites/all/themes
+- enable the theme in /admin/appearance site
+- theming according to needs
+
+
+Multilingual Deliverables
+---------------------------------------------------------------------------------------
+Users can switch between courses in English, French and German language, by using the top right menu.
+
+
+Images
+---------------------------------------------------------------------------------------
+Editor can select the focal point of an image when editing the node, by pointing the white cross on a desired position and saving the node.
+After viewing the course node again, the image should be cropped according to the Focal Point Crop image style and selected focal point.
+
+
+Listing Page
+---------------------------------------------------------------------------------------
+Listing Page View /courses is also a default home page where all course teasers with required fields are listed.
+User is able to filter the results by selecting Topic Area, Difficulty Level and a range of course cost and clicking apply button.
+Clicking on each of the course titles or course thumbnail leads to course node view.
+
+
+Course View
+---------------------------------------------------------------------------------------
+Course node view displays all fields (that have content) and can be added to wishlist when user is registered and logged in, via link at the bottom right of the page.
+
+
+Registered users
+---------------------------------------------------------------------------------------
+Users can register on the site by creating a new account on the left sidebar /login/register form.
+Once registered, a user can add each course to his own wishlist.
+He can view all his wishlisted courses on /wishlist site, where he is able to also remove the courses from the wishlist.
+He can access the wishlist by visiting My account form the top right menu and then clicking on the tab "User Wishlist".
+User can also see other users wishlists, by visiting a other-users-wishlists/ site (or visiting /user/[user id]/wishlist directly), but he cannot remove their wishlist entries.
+
+Note: It wasn't clear from the instructions, whether a separate page/view is needed for viewing other users's whishlists or does it just have to be visible by typing an url (user/1/wishlist), but I provided one via main menu.
+
+
+Developer notes
+---------------------------------------------------------------------------------------
+- Site has one content type (Course) and 3 vocabularies (Course language, Difficulty Level, Topic Areas)
+- Listings are done with 4 views:
+  - Courses: lists all teasers of courses without a pager
+  - Wishlist: lists all courses added to current user's wishlist in a table format
+  - User Wishlist: lists a selected user's wishlist in a table format, based on the uid provided in url
+  - Other users's wishlists: lists all other users's (but current) wishlists
+- I didn't see a requirement for a certain home page, so I set the courses list as the home page
+- 8 dummy nodes created have just titles "translated" (prefixed by English, French or German) for testing
+- Courses list is a view of teasers. Display can be changed via admin/structure/types/manage/course/display/teaser or by changing the courses view to display fields instead of teasers and changing accordingly.
+
+
+
